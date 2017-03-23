@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="spotifyApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vinoth J">
+    <meta name="description" content="This is a sample Spotify application">
+
+    <!-- Mobile Stuff -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="CHANGE-ME">
+
+    <!-- Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CHANGE-ME">
+
+    <!-- Windows 8 -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <meta name="theme-color" content="#000000">
+
+    <!--CSS-->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/darkly/bootstrap.min.css" rel="stylesheet" />
+    <link href="app/styles/custom.css" rel="stylesheet" />
+
+    <title>Spotify Assignment</title>
+  </head>
+
+  <body>
+    <!-- Insert your HTML here -->
+    <div class="container-fluid" ui-view></div>
+
+    <!-- Scripts -->
+    <!--Node Modules-->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-spotify/dist/angular-spotify.min.js"></script>
+
+    <!--Custom Scripts-->
+    <script src="app/app.module.js"></script>
+
+    <!--Features-->
+    <!--Search Feature-->
+    <script src="app/features/home/home.controller.js"></script>
+    <script src="app/features/home/home.service.js"></script>
+
+
+  </body>
+</html>
