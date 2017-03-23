@@ -1,0 +1,24 @@
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-brand {
+  padding: 0 25px;
+}
+
+.brand-text {
+  padding-top: 18px;
+}
+
+ul > li {
+ list-style-type: none;
+}
+
+.div-thumbnail {
+  padding: 10px 10px 20px 10px;
+}
+
+.thumbnail {
+  height: 300px;
+  width: 300px;
+}
