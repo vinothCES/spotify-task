@@ -1,0 +1,34 @@
+{
+  "name": "spotify-task",
+  "version": "1.0.0",
+  "description": "This is a sample application for Spotify assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothCES/spotify-task.git"
+  },
+  "author": "Vinoth J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinothCES/spotify-task/issues"
+  },
+  "homepage": "https://github.com/vinothCES/spotify-task#readme",
+  "dependencies": {
+    "angular": "^1.3.2",
+    "angular-spotify": "^1.4.1",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest"
+  }
+}
