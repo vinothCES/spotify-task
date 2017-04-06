@@ -16,9 +16,16 @@
       if (keywords) {
         homeService.search(homeCtrl.searchTxt).then(function (res) {
           homeCtrl.searchResults = res;
-          homeCtrl.albumList = homeCtrl.searchResults.albums.items;
-          homeCtrl.artistList = homeCtrl.searchResults.artists.items;
-          console.log(homeCtrl.searchResults);
+          if (res.albums.items.length > 0) {
+            homeCtrl.albumList = res.albums.items;
+          } else {
+            homeCtrl.albumList = null;
+          }
+          if (res.artists.items.length > 0) {
+            homeCtrl.artistList = res.artists.items;
+          } else {
+            homeCtrl.artistList = null;
+          }
         });
       } else {
         homeCtrl.searchResults = null;
