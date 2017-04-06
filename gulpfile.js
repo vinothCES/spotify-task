@@ -27,4 +27,4 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('default', ['html', 'js', 'watch', 'connect']);
+gulp.task('default', ['html', 'js', 'connect', 'watch']);
