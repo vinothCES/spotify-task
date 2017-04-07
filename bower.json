@@ -1,0 +1,21 @@
+{
+  "name": "spotify-task",
+  "description": "This is a sample application for Spotify assignment",
+  "main": "app.js",
+  "authors": [
+    "Vinoth J"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vinothCES/spotify-task",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-audio": "^1.7.3"
+  }
+}
