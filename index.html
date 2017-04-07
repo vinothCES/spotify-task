@@ -38,18 +38,27 @@
     <div class="container-fluid" ui-view></div>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--Node Modules-->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="node_modules/angular-spotify/dist/angular-spotify.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!--Bower Modules-->
+    <script src="bower_components/angular-audio/app/angular.audio.js"></script>
 
     <!--Custom Scripts-->
     <script src="app/app.module.js"></script>
 
     <!--Features-->
-    <!--Search Feature-->
+    <!--Home Feature-->
     <script src="app/features/home/home.controller.js"></script>
     <script src="app/features/home/home.service.js"></script>
+    
+    <!--Album Detail feature-->
+    <script src="app/features/album/album-detail.controller.js"></script>
+    <script src="app/features/album/album-detail.service.js"></script>
 
 
   </body>

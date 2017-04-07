@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  
+  <div ng-if="albumDetailCtrl.name">    
+    <div class="col-xs-12">
+      <div class="jumbotron">
+        <div class="container">
+          <div class="col-xs-3">    
+            <img class="img-thumbnail thumbnail" ng-src="{{albumDetailCtrl.imgUrl}}" />
+          </div><!--col-xs-3-->
+          <div class="page-header">
+            <h2 class="text-success">{{albumDetailCtrl.name}}<br/><small>{{albumDetailCtrl.artist}}</small></h2>
+          </div><!--page-header-->
+          <div>
+            <h4><span class="label label-primary">Label</span>&nbsp;&nbsp;{{albumDetailCtrl.label}}</h4>
+            <h4><span class="label label-primary">Release Date</span>&nbsp;&nbsp;{{albumDetailCtrl.release}}</h4>
+            <h4><span class="label label-primary">Popularity</span>&nbsp;&nbsp;{{albumDetailCtrl.popularity}}</h4>
+            <h4><span class="label label-primary">Available in</span>&nbsp;&nbsp;{{albumDetailCtrl.availability}} countries</h4>
+          </div>
+        </div><!--container-->
+      </div><!--jumbotron-->
+    </div><!--col-xs-12-->
+    
+    <div class="col-xs-12">
+      <div class="list-group">
+        <div class="list-group-item" ng-repeat="track in albumDetailCtrl.tracks track by track.id">          
+          <button type="button" class="btn btn-warning list-group-item" data-toggle="collapse" data-target="#{{track.track_number}}" ng-click="albumDetailCtrl.onSelectTrack(track)">
+            <span class="label label-warning">{{track.track_number}}</span>&nbsp;&nbsp;
+            {{track.name}}
+          </button>
+          <div class="collapse" id="{{track.track_number}}">
+            <div class="well">
+              <div class="row">
+                <div class="col-xs-3">
+                <span class="label label-primary" ng-repeat="artist in track.artists track by artist.id">{{artist.name}}</span>&nbsp;&nbsp;
+              </div>
+              <div class="col-xs-9">
+                <div class="col-xs-3">
+                  <button type="button" class="btn btn-xs btn-warning" ng-click="albumDetailCtrl.handlePlay()">
+                    <span class="glyphicon {{albumDetailCtrl.playBtnIcon}}"></span>Play
+                  </button>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped active col-xs-9" role="progressbar" aria-valuenow="{{albumDetailCtrl.audio.currentTime | trackTime}}" aria-valuemin="0" aria-valuemax="{{albumDetailCtrl.audio.duration | trackTime}}" style="width: 70%">
+                    <!--<span class="sr-only">40% Complete (success)</span>-->
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--list-group-->
+    </div><!--col-xs-6-->    
+  </div>
+</div><!--container-fluid-->
