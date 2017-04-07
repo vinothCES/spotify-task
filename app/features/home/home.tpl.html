@@ -32,10 +32,10 @@
       <h3 class="text-success">Albums</h3>
     </div>
     <div ng-repeat="album in homeCtrl.albumList">
-      <a class="col-xs-3 div-thumbnail">
+      <div role="button" class="col-xs-3 div-thumbnail" ui-sref="album-detail({albumId: album.id})">
         <img class="img-thumbnail thumbnail" ng-src="{{album.images[1].url}}" />
         <span class="text-primary">{{album.name | limitTo:homeCtrl.stringLimit}}</span>
-      </a>
+      </div>
     </div>
   </div>
   <div class="col-xs-12">
